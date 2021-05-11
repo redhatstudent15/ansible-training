@@ -2,7 +2,7 @@
 project_id: "ansibletraining"
 
 ## EC2
-ec2_vpc_id: vpc-52152834
+ec2_vpc_id: vpc-03fb0cc1119ee0f5e
 
 ## Subnets definition
 subnets:
@@ -83,7 +83,7 @@ security_groups:
 instances:
     - name: classroom
       key: ansiblepoc
-      ami: ami-04facb3ed127a2eb6
+      ami: ami-032e5b6af8a711f30
       type: t2.micro
       subnet: subnet1-az1
       groups:
@@ -94,7 +94,7 @@ instances:
     - name: student01
       key: ansiblepoc
       type: t2.micro
-      ami: ami-04facb3ed127a2eb6
+      ami: ami-032e5b6af8a711f30
       subnet: subnet1-az1
       groups:
           - ssh_rule
@@ -104,7 +104,7 @@ instances:
     - name: student02
       key: ansiblepoc
       type: t2.micro
-      ami: ami-04facb3ed127a2eb6
+      ami: ami-032e5b6af8a711f30
       subnet: subnet1-az1
       groups:
           - ssh_rule
@@ -114,7 +114,7 @@ instances:
     - name: student03
       key: ansiblepoc
       type: t2.micro
-      ami: ami-04facb3ed127a2eb6
+      ami: ami-032e5b6af8a711f30
       subnet: subnet1-az1
       groups:
           - ssh_rule
@@ -124,7 +124,7 @@ instances:
     - name: student04
       key: ansiblepoc
       type: t2.micro
-      ami: ami-04facb3ed127a2eb6
+      ami: ami-032e5b6af8a711f30
       subnet: subnet1-az1
       groups:
           - ssh_rule
@@ -134,7 +134,7 @@ instances:
     - name: student05
       key: ansiblepoc
       type: t2.micro
-      ami: ami-04facb3ed127a2eb6
+      ami: ami-032e5b6af8a711f30
       subnet: subnet1-az1
       groups:
           - ssh_rule
@@ -144,7 +144,7 @@ instances:
     - name: student06
       key: ansiblepoc
       type: t2.micro
-      ami: ami-04facb3ed127a2eb6
+      ami: ami-032e5b6af8a711f30
       subnet: subnet1-az1
       groups:
           - ssh_rule
@@ -154,7 +154,7 @@ instances:
     - name: student07
       key: ansiblepoc
       type: t2.micro
-      ami: ami-04facb3ed127a2eb6
+      ami: ami-032e5b6af8a711f30
       subnet: subnet1-az1
       groups:
           - ssh_rule
@@ -164,7 +164,7 @@ instances:
     - name: student08
       key: ansiblepoc
       type: t2.micro
-      ami: ami-04facb3ed127a2eb6
+      ami: ami-032e5b6af8a711f30
       subnet: subnet1-az1
       groups:
           - ssh_rule
@@ -174,7 +174,7 @@ instances:
     - name: student09
       key: ansiblepoc
       type: t2.micro
-      ami: ami-04facb3ed127a2eb6
+      ami: ami-032e5b6af8a711f30
       subnet: subnet1-az1
       groups:
           - ssh_rule
@@ -184,7 +184,7 @@ instances:
     - name: student10
       key: ansiblepoc
       type: t2.micro
-      ami: ami-04facb3ed127a2eb6
+      ami: ami-032e5b6af8a711f30
       subnet: subnet1-az1
       groups:
           - ssh_rule
@@ -194,7 +194,7 @@ instances:
     - name: student11
       key: ansiblepoc
       type: t2.micro
-      ami: ami-04facb3ed127a2eb6
+      ami: ami-032e5b6af8a711f30
       subnet: subnet1-az1
       groups:
           - ssh_rule
@@ -204,7 +204,7 @@ instances:
     - name: student12
       key: ansiblepoc
       type: t2.micro
-      ami: ami-04facb3ed127a2eb6
+      ami: ami-032e5b6af8a711f30
       subnet: subnet1-az1
       groups:
           - ssh_rule
@@ -214,7 +214,7 @@ instances:
     - name: student13
       key: ansiblepoc
       type: t2.micro
-      ami: ami-04facb3ed127a2eb6
+      ami: ami-032e5b6af8a711f30
       subnet: subnet1-az1
       groups:
           - ssh_rule
@@ -224,7 +224,7 @@ instances:
     - name: student14
       key: ansiblepoc
       type: t2.micro
-      ami: ami-04facb3ed127a2eb6
+      ami: ami-032e5b6af8a711f30
       subnet: subnet1-az1
       groups:
           - ssh_rule
@@ -234,7 +234,7 @@ instances:
     - name: student15
       key: ansiblepoc
       type: t2.micro
-      ami: ami-04facb3ed127a2eb6
+      ami: ami-032e5b6af8a711f30
       subnet: subnet1-az1
       groups:
           - ssh_rule
@@ -244,7 +244,7 @@ instances:
     - name: student16
       key: ansiblepoc
       type: t2.micro
-      ami: ami-04facb3ed127a2eb6
+      ami: ami-032e5b6af8a711f30
       subnet: subnet1-az1
       groups:
           - ssh_rule
@@ -254,7 +254,7 @@ instances:
     - name: student17
       key: ansiblepoc
       type: t2.micro
-      ami: ami-04facb3ed127a2eb6
+      ami: ami-032e5b6af8a711f30
       subnet: subnet1-az1
       groups:
           - ssh_rule
@@ -264,7 +264,7 @@ instances:
     - name: student18
       key: ansiblepoc
       type: t2.micro
-      ami: ami-04facb3ed127a2eb6
+      ami: ami-032e5b6af8a711f30
       subnet: subnet1-az1
       groups:
           - ssh_rule
@@ -274,7 +274,7 @@ instances:
     - name: student19
       key: ansiblepoc
       type: t2.micro
-      ami: ami-04facb3ed127a2eb6
+      ami: ami-032e5b6af8a711f30
       subnet: subnet1-az1
       groups:
           - ssh_rule
@@ -284,7 +284,7 @@ instances:
     - name: student20
       key: ansiblepoc
       type: t2.micro
-      ami: ami-04facb3ed127a2eb6
+      ami: ami-032e5b6af8a711f30
       subnet: subnet1-az1
       groups:
           - ssh_rule
@@ -294,7 +294,7 @@ instances:
     - name: student21
       key: ansiblepoc
       type: t2.micro
-      ami: ami-04facb3ed127a2eb6
+      ami: ami-032e5b6af8a711f30
       subnet: subnet1-az1
       groups:
           - ssh_rule
@@ -304,7 +304,7 @@ instances:
     - name: student22
       key: ansiblepoc
       type: t2.micro
-      ami: ami-04facb3ed127a2eb6
+      ami: ami-032e5b6af8a711f30
       subnet: subnet1-az1
       groups:
           - ssh_rule
@@ -314,7 +314,7 @@ instances:
     - name: student23
       key: ansiblepoc
       type: t2.micro
-      ami: ami-04facb3ed127a2eb6
+      ami: ami-032e5b6af8a711f30
       subnet: subnet1-az1
       groups:
           - ssh_rule
@@ -324,7 +324,7 @@ instances:
     - name: student24
       key: ansiblepoc
       type: t2.micro
-      ami: ami-04facb3ed127a2eb6
+      ami: ami-032e5b6af8a711f30
       subnet: subnet1-az1
       groups:
           - ssh_rule
@@ -334,7 +334,7 @@ instances:
     - name: student25
       key: ansiblepoc
       type: t2.micro
-      ami: ami-04facb3ed127a2eb6
+      ami: ami-032e5b6af8a711f30
       subnet: subnet1-az1
       groups:
           - ssh_rule
@@ -344,7 +344,7 @@ instances:
     - name: student26
       key: ansiblepoc
       type: t2.micro
-      ami: ami-04facb3ed127a2eb6
+      ami: ami-032e5b6af8a711f30
       subnet: subnet1-az1
       groups:
           - ssh_rule
@@ -354,7 +354,7 @@ instances:
     - name: student27
       key: ansiblepoc
       type: t2.micro
-      ami: ami-04facb3ed127a2eb6
+      ami: ami-032e5b6af8a711f30
       subnet: subnet1-az1
       groups:
           - ssh_rule
@@ -364,7 +364,7 @@ instances:
     - name: student28
       key: ansiblepoc
       type: t2.micro
-      ami: ami-04facb3ed127a2eb6
+      ami: ami-032e5b6af8a711f30
       subnet: subnet1-az1
       groups:
           - ssh_rule
@@ -374,7 +374,7 @@ instances:
     - name: student29
       key: ansiblepoc
       type: t2.micro
-      ami: ami-04facb3ed127a2eb6
+      ami: ami-032e5b6af8a711f30
       subnet: subnet1-az1
       groups:
           - ssh_rule
@@ -384,7 +384,7 @@ instances:
     - name: student30
       key: ansiblepoc
       type: t2.micro
-      ami: ami-04facb3ed127a2eb6
+      ami: ami-032e5b6af8a711f30
       subnet: subnet1-az1
       groups:
           - ssh_rule
@@ -393,7 +393,7 @@ instances:
 
     - name: ansibletower001
       key: ansiblepoc
-      ami: ami-04facb3ed127a2eb6
+      ami: ami-032e5b6af8a711f30
       type: t2.medium
       subnet: subnet1-az2
       groups:
@@ -404,7 +404,7 @@ instances:
 
     - name: ansibletower002
       key: ansiblepoc
-      ami: ami-04facb3ed127a2eb6
+      ami: ami-032e5b6af8a711f30
       type: t2.medium
       subnet: subnet1-az2
       groups:
@@ -415,7 +415,7 @@ instances:
 
     - name: ansibletower003
       key: ansiblepoc
-      ami: ami-04facb3ed127a2eb6
+      ami: ami-032e5b6af8a711f30
       type: t2.medium
       subnet: subnet1-az2
       groups:
@@ -426,7 +426,7 @@ instances:
 
     - name: ansibletowerdb001
       key: ansiblepoc
-      ami: ami-04facb3ed127a2eb6
+      ami: ami-032e5b6af8a711f30
       type: t2.small
       subnet: subnet1-az3
       groups:
