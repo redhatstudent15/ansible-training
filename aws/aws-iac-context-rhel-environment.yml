@@ -48,6 +48,7 @@
   
   vars:
     ansible_ssh_private_key_file: ~/Documents/ansiblepoc.pem
+    ansible_python_interpreter: /bin/python3
 
   vars_prompt:
     - name: "rh_cdn_user"
@@ -58,19 +59,10 @@
   tasks:
 
     - name: Register Red Hat instance with auto-subscribe
-      redhat_subscription:
-        state: present
-        username: "{{ rh_cdn_user }}"
-        password: "{{ rh_cdn_pass }}"
-        force_register: true
+      shell: subscription-manager register --username "{{ rh_cdn_user }}" --password "{{ rh_cdn_pass }}" --force  --auto-attach
       when:
         - ansible_facts.os_family == "RedHat"
       ignore_errors: true
-
-    - name: Attach auto subscription
-      shell: subscription-manager attach --auto
-      when:
-        - ansible_facts.os_family == "RedHat"
 
 
 - hosts: student*
@@ -85,6 +77,8 @@
 
   vars:
     ansible_ssh_private_key_file: ~/Documents/ansiblepoc.pem
+    ansible_python_interpreter: /bin/python3
+
 
   tasks:
   
@@ -105,8 +99,9 @@
         password: "{{ new_hash_pass }}"
         group: wheel
 
+
     - name: Install packages
-      package:
+      dnf: 
         name: "{{ item }}"
         state: present
       loop:
@@ -139,10 +134,11 @@
 
   vars:
     ansible_ssh_private_key_file: ~/Documents/ansiblepoc.pem
+    ansible_python_interpreter: /bin/python3
 
   tasks:
     - name: Install package http
-      package:
+      dnf:
         name: httpd
         state: present
     - name: Enable and Up httpd
@@ -161,6 +157,7 @@
 
   vars:
     ansible_ssh_private_key_file: ~/Documents/ansiblepoc.pem
+    ansible_python_interpreter: /bin/python3
 
   tasks:
     - shell: subscription-manager repos --enable ansible-2.9-for-rhel-8-x86_64-rpms
@@ -182,6 +179,8 @@
 
   vars:
     ansible_ssh_private_key_file: ~/Documents/ansiblepoc.pem
+    ansible_python_interpreter: /bin/python3
+  
 
   tasks:
     - name: Copy SSH keys (Pub)
