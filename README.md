@@ -124,4 +124,7 @@ Author Information
  Asier Cidon - Cloud Consultant
 
  asier.cidon@redhat.com
-   
+ 
+ Iván Pazos - Cloud Consultant
+
+ ivan.pazos@redhat.com  
