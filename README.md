@@ -66,11 +66,6 @@ $ ansible-playbook aws-iac-destroy.yaml
 
 
 ---
-**NOTE**
-
-Red Hat Automation Platform & Microsoft Training is based on Azure Environment which has to be deployed and configured previously. For this reason, it is not required to deploy the AWS environment. 
-
----
 
 Red Hat Ansible Engine Lessons
 ---------
@@ -106,11 +101,6 @@ Training folder includes The following list includes a lessons summary:
 -   [**Lesson 6**](./training_tower/lesson06/README.md) - Workflow Templates
 -   [**Lesson 7**](./training_tower/lesson07/README.md) - Ansible Tower Role Based Access Control
 -   [**Lesson 8**](./training_tower/lesson08/README.md) - Emulate a Real Ansible Tower Project (Bonus)
-
-Red Hat Automation Platform & Microsoft Training
----------
-
-Please, visit [**Red Hat Automation Platform & Microsoft Training**](./training_microsoft/README.md) to access this training.
 
 
 License
