@@ -108,6 +108,10 @@
         - git
         - mariadb
         - python3-PyMySQL
+        - cockpit
+
+    - name: Enable Cockpit socket
+      shell: systemctl enable --now cockpit.socket
 
     - name: Change SSH configuration pass auth
       lineinfile:
@@ -123,8 +127,7 @@
         name: sshd
         state: restarted
         enabled: yes
-
-
+    
 - hosts: classroom
   user: ec2-user
   become: true
