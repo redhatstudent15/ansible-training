@@ -101,7 +101,7 @@
 
 
     - name: Install packages
-      dnf: 
+      yum: 
         name: "{{ item }}"
         state: present
       loop:
