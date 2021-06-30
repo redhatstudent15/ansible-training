@@ -47,7 +47,7 @@
     - generalsubs
   
   vars:
-    ansible_ssh_private_key_file: ~/Documents/ansiblepoc.pem
+    ansible_ssh_private_key_file: /root/SABIS_AnsibleWorkshop/ansiblepoc.pem
     ansible_python_interpreter: /bin/python3
 
   vars_prompt:
@@ -76,7 +76,7 @@
     - users
 
   vars:
-    ansible_ssh_private_key_file: ~/Documents/ansiblepoc.pem
+    ansible_ssh_private_key_file: /root/SABIS_AnsibleWorkshop/ansiblepoc.pem
     ansible_python_interpreter: /bin/python3
 
 
@@ -136,7 +136,7 @@
     - classroom
 
   vars:
-    ansible_ssh_private_key_file: ~/Documents/ansiblepoc.pem
+    ansible_ssh_private_key_file: /root/SABIS_AnsibleWorkshop/ansiblepoc.pem
     ansible_python_interpreter: /bin/python3
 
   tasks:
@@ -159,7 +159,7 @@
     - ansibletower
 
   vars:
-    ansible_ssh_private_key_file: ~/Documents/ansiblepoc.pem
+    ansible_ssh_private_key_file: /root/SABIS_AnsibleWorkshop/ansiblepoc.pem
     ansible_python_interpreter: /bin/python3
 
   tasks:
@@ -181,7 +181,7 @@
     - ansibletowerkeys
 
   vars:
-    ansible_ssh_private_key_file: ~/Documents/ansiblepoc.pem
+    ansible_ssh_private_key_file: /root/SABIS_AnsibleWorkshop/ansiblepoc.pem
     ansible_python_interpreter: /bin/python3
   
 
