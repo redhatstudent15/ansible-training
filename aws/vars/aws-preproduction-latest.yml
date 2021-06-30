@@ -87,7 +87,7 @@ security_groups:
 
 ## Instances definition
 instances:
-    - name: classroom
+    - name: classroom0001
       key: ansiblepoc
       ami: ami-05a48cc61e9a7e1ad
       type: t2.micro
@@ -97,7 +97,7 @@ instances:
         - http_rule
         - mysql_rule
 
-    - name: student01
+    - name: student0001
       key: ansiblepoc
       type: t2.micro
       ami: ami-05a48cc61e9a7e1ad
@@ -397,7 +397,7 @@ instances:
     #       - http_rule
     #       - mysql_rule
 
-    - name: ansibletower001
+    - name: ansibletower0001
       key: ansiblepoc
       ami: ami-05a48cc61e9a7e1ad
       type: t2.medium
@@ -408,7 +408,7 @@ instances:
           - app_rule
           - tower_cluster
 
-    - name: ansibletower002
+    - name: ansibletower0002
       key: ansiblepoc
       ami: ami-05a48cc61e9a7e1ad
       type: t2.medium
@@ -419,7 +419,7 @@ instances:
           - app_rule
           - tower_cluster
 
-    - name: ansibletower003
+    - name: ansibletower0003
       key: ansiblepoc
       ami: ami-05a48cc61e9a7e1ad
       type: t2.medium
@@ -430,7 +430,7 @@ instances:
           - app_rule
           - tower_cluster
 
-    - name: ansibletowerdb001
+    - name: ansibletowerdb0001
       key: ansiblepoc
       ami: ami-05a48cc61e9a7e1ad
       type: t2.small
