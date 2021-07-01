@@ -142,9 +142,11 @@
 
   tasks:
     - name: Install package http
-      dnf:
-        name: httpd
-        state: present
+      shell: yum install -y httpd
+      # dnf:
+      #   name: httpd
+      #   state: present
+
     - name: Enable and Up httpd
       service:
         name: httpd
