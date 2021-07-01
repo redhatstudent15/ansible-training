@@ -101,14 +101,15 @@
 
 
     - name: Install packages
-      dnf: 
-        name: "{{ item }}"
-        state: present
-      loop:
-        - git
-        - mariadb
-        - python3-PyMySQL
-        - cockpit
+      shell: yum install -y git mariadb python3-PyMySQL cockpit
+      #dnf: 
+      #  name: "{{ item }}"
+      #  state: present
+      #loop:
+      #  - git
+      #  - mariadb
+      #  - python3-PyMySQL
+      #  - cockpit
 
     - name: Enable Cockpit socket
       shell: systemctl enable --now cockpit.socket
