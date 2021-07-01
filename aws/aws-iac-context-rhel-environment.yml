@@ -191,7 +191,7 @@
   tasks:
     - name: Copy SSH keys (Pub)
       copy:
-        src: ~/Documents/tower_cluster.pem.pub
+        src: /root/SABIS_AnsibleWorkshop/tower_cluster.pem.pub
         dest: /root/.ssh/id_rsa.pub
         owner: root
         group: root
@@ -199,7 +199,7 @@
 
     - name: Copy SSH keys (Priv)
       copy:
-        src: ~/Documents/tower_cluster.pem
+        src: /root/SABIS_AnsibleWorkshop/tower_cluster.pem
         dest: /root/.ssh/id_rsa
         owner: root
         group: root
@@ -207,7 +207,7 @@
 
     - name: Copy SSH keys (Authorized)
       copy:
-        src: ~/Documents/tower_cluster.pem.pub
+        src: /root/SABIS_AnsibleWorkshop/tower_cluster.pem.pub
         dest: /root/.ssh/authorized_keys
         owner: root
         group: root
