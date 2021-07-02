@@ -129,7 +129,7 @@
         state: restarted
         enabled: yes
     
-- hosts: classroom
+- hosts: classroom*
   user: ec2-user
   become: true
 
@@ -154,7 +154,7 @@
         enabled: yes
 
 
-- hosts: ansibletower001
+- hosts: ansibletower01
   user: ec2-user
   become: true
 
