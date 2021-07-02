@@ -169,12 +169,13 @@
     - shell: subscription-manager repos --enable ansible-2.9-for-rhel-8-x86_64-rpms
 
     - name: Install packages 
-      package:
-        name: "{{ item }}"
-        state: present
-      loop:
-        - ansible
-        - wget
+      shell: yum install -y ansible wget
+      # package:
+      #   name: "{{ item }}"
+      #   state: present
+      # loop:
+      #   - ansible
+      #   - wget
 
 - hosts: ansibletower*
   user: ec2-user
