@@ -59,7 +59,7 @@
   tasks:
 
     - name: Register Red Hat instance with auto-subscribe
-      shell: subscription-manager register --username "{{ rh_cdn_user }}" --password "{{ rh_cdn_pass }}" --force  --auto-attach
+      shell: subscription-manager config --rhsm.manage_repos=1 && subscription-manager register --username "{{ rh_cdn_user }}" --password "{{ rh_cdn_pass }}" --force  --auto-attach 
       when:
         - ansible_facts.os_family == "RedHat"
       ignore_errors: true
