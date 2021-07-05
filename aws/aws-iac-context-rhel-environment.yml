@@ -104,7 +104,7 @@
         name: "{{ inventory_hostname }}"
         password: "{{ new_hash_pass }}"
         group: wheel
-      delegate_to: classroom
+      delegate_to: classroom01
 
     - name: Install packages
       shell: yum install -y git mariadb python3-PyMySQL cockpit
