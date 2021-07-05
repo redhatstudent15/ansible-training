@@ -58,7 +58,6 @@
       copy:
         src: "./usertable.mysql"
         dest: "/home/{{ ansible_user }}/usertable.mysql"
-      delegate_to: "{{ mysql_client_ip }}"
 
     - name: Import usertable.mysql
       become: false
@@ -69,5 +68,4 @@
         login_host: "{{ ansible_host }}"
         login_user: testuser01
         login_password: testuser01
-      delegate_to: "{{ mysql_client_ip }}"
       loop: "{{ mysql_db }}"
