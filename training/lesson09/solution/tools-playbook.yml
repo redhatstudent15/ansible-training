@@ -68,6 +68,6 @@
         target: "/home/{{ ansible_user }}/usertable.mysql"
         login_host: "{{ ansible_host }}"
         login_user: testuser01
-        login_password: testuser01
+        login_password: password01
       delegate_to: "{{ mysql_client_ip }}"
       loop: "{{ mysql_db }}"
