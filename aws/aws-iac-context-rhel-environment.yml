@@ -148,7 +148,7 @@
 
   tasks:
     - name: Install package http
-      shell: yum install -y httpd
+      shell: yum install -y httpd python3-PyMySQL
       # dnf:
       #   name: httpd
       #   state: present
@@ -159,6 +159,12 @@
         state: started
         enabled: yes
 
+    - name: Enable ssh password authentication
+      lineinfile:
+        state: present
+        dest: /etc/ssh/sshd_config
+        regexp: "^PasswordAuthentication no$"
+        line: "PasswordAuthentication yes"
 
 - hosts: ansibletower01
   user: ec2-user
