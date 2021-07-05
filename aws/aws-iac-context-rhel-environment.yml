@@ -148,7 +148,7 @@
 
   tasks:
     - name: Install package http
-      shell: yum install -y httpd python3-PyMySQL
+      shell: yum install -y httpd python3-PyMySQL mariadb
       # dnf:
       #   name: httpd
       #   state: present
