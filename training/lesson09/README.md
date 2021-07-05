@@ -29,7 +29,7 @@ In order to assist this laboratory implementation, a set of resources have been 
     -   Restart mysqld service if installation packages has not changed
     -   Create two new mysql databases using "mysql_db" variable
     -   Create a new user using "mysql_name" and "mysql_pass" variables with read/write rights to "mysql_db" databases from host "mysql_client_ip"
-    -   Import "usertable.mysql" table file into both "mysql_db" databases delegating the operation to <mysql_client_ip> instance 
+    -   Import "usertable.mysql" table file into both "mysql_db" databases
 -   Before running your playbook, run the ansible-playbook --syntax-check  command to verify that its syntax is correct
 -   Run the playbook!
 -   Test the database
