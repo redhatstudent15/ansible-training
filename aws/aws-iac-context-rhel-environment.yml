@@ -165,6 +165,15 @@
         dest: /etc/ssh/sshd_config
         regexp: "^PasswordAuthentication no$"
         line: "PasswordAuthentication yes"
+      notify: Restart SSHD
+
+  handlers:
+
+    - name: Restart SSHD
+      service:
+        name: sshd
+        state: restarted
+        enabled: yes
 
 - hosts: ansibletower01
   user: ec2-user
