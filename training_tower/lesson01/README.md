@@ -49,15 +49,18 @@ $ cd ansible-tower-setup-bundle-3.6.1-1.el8/
 $ vi inventory
 
 [tower]
-localhost ansible_connection=local
+ansibletower01 ansible_hostname=XXX.XXX.XXX.XXX
+ansibletower02 ansible_hostname=XXX.XXX.XXX.XXX
+ansibletower03 ansible_hostname=XXX.XXX.XXX.XXX
 
 [database]
+ansibletowerdb01 ansible_hostname=XXX.XXX.XXX.XXX
 
 [all:vars]
 admin_password='xxxxxxx'
 
-pg_host=''
-pg_port=''
+pg_host='XXX.XX.XX.XXX'
+pg_port='5432'
 
 pg_database='awx'
 pg_username='awx'
