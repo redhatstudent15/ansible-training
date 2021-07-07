@@ -43,8 +43,8 @@ A job template is a definition and set of parameters for running an Ansible job.
 -   Complete the "Job Template" form using the following entries:
     -   Name: ``<studentxx>``Second Job Template
     -   Description: Second Job Template
-    -   Project: ``<studentxx>``Second Project
-    -   Inventory: ``<studentxx>``Second Inventory
+    -   Project: ``<studentxx>``First Project
+    -   Inventory: ``<studentxx>``First Inventory
     -   Credentials: ``<studentxx>``Machine Credential
     -   Playbook: ansible-playbook.yml
 -   Click on ADD SURVEY
