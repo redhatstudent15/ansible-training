@@ -211,6 +211,9 @@
   
 
   tasks:
+    - name: Install packages 
+      shell: yum install -y ansible rhel-system-roles
+    
     - name: Copy SSH keys (Pub)
       copy:
         src: /root/SABIS_AnsibleWorkshop/tower_cluster.pem.pub
