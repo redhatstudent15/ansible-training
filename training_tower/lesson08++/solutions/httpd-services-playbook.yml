@@ -19,4 +19,4 @@
     - name: Manage httpd service
       service:
         name: httpd
-        state: "{{ mysql_service_state }}"
+        state: "{{ httpd_service_state }}"

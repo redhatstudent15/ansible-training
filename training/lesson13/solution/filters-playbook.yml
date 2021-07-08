@@ -15,12 +15,12 @@
   tasks:
     - name: Obtain file content
       slurp:
-        file: ./dictionary.json
+        src: FULL_PATH/dictionary.json
       register: jsondict
       
     - name: Parse json to an ansible dictionary
       set_fact:
-        mydict: "{{ jsondict.stdout | from_json }}"
+        mydict: "{{ jsondict.content | b64decode | from_json }}"
 
     - name: "Display all cluster names"
       debug:

@@ -27,7 +27,7 @@ $ ansible-galaxy init roles/mariadb
 
 ```
 $ sudo -i
-$ mysql -u root -p
+$ mysql -u test01 -p -h INTERNAL_IP
 MariaDB [(none)]> $ show databases;
 MariaDB [(none)]> $ show grants for 'test01'@'xxx';
 MariaDB [(none)]> $ show grants for 'test02'@'xxx';

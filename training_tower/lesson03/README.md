@@ -26,7 +26,7 @@ Your free GitHub account gives you unlimited access to public and private softwa
     -   Organization: ``<studentxx>``
     -   SCM Type: Git
     -   SCM URL: (* Your new Github Repository URL)
-    -   SCM Branch: master
+    -   SCM Branch: main
     -   SCM Credentials: ``<studentxx>`` GitHub Credential
 -   Click on SAVE
 -   Click on PROJECTS

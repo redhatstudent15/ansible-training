@@ -23,8 +23,8 @@ In this lab you'll learn how to setup a workflow.
 -   Click on + 
 -   Select "Workflow Template"
 -   Complete the "Workflow Template" form using the following entries:
-    -   Name: ``<studentxx>``First Job Template
-    -   Description: First Job Template
+    -   Name: ``<studentxx>``First WF Job Template
+    -   Description: First WF Job Template
     -   Organization: ``<studentxx>``
 -   Click on SAVE
 -   Click on START
