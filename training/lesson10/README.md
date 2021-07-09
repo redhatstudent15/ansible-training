@@ -16,21 +16,21 @@ In order to assist this laboratory implementation, a set of resources have been 
 
 ## Steps 
 
--   Create an inventory file named "inventory" with a group named "myinstance" and your internal instance IP assigned included
--   Modify apache configuration file named "httpd.conf" in order to enable php index and listen in port 80 and 81
--   Create a file named "index.php" with phpinfo() function included
--   Create a playbook named "handlers-playbook.yml" using "myinstance" as a hosts parameter and ``<studentxx>`` as a user. The playbook should use tasks to ensure that the following conditions are met on the managed hosts:
+-   Create an inventory file named `inventory` with a group named "myinstance" and your internal instance IP assigned included (you can reuse the inventory file used in the previous lesson)
+-   Modify apache configuration file named `httpd.conf` in order to enable php index and listen in port 80 and 81
+-   Create a file named `index.php` with phpinfo() function included
+-   Create a playbook named `handlers-playbook.yml` using "myinstance" as a hosts parameter and ``<studentxx>`` as a user. The playbook should use tasks to ensure that the following conditions are met on the managed hosts:
     -   Implement a block with the following tasks:
         -   Install "apache2" package
     -   If any of the previous tasks fail, implement the following tasks:
         -   Install "httpd" package
     -   In any case, the following tasks need to be executed under the block:
-        -   Copy httpd configuration file named "httpd.conf" to "/etc/httpd/conf/httpd.conf"
+        -   Copy httpd configuration file named `httpd.conf` to `/etc/httpd/conf/httpd.conf`
         -   Install "php" package
-        -   Create a new folder "php" in "/var/www/html"
-        -   Copy php file named "index.php" to "/var/www/html/php"
+        -   Create a new folder `php` in `/var/www/html`
+        -   Copy php file named `index.php` to `/var/www/html/php`
     -   NOTE: It is important to bear in mind that it is necessary to restart httpd service when a new package or package version is installed or configuration file modified
--   Before running your playbook, run the ansible-playbook --syntax-check  command to verify that its syntax is correct
+-   Before running your playbook, run the `ansible-playbook --syntax-check` command to verify that its syntax is correct
 -   Run the playbook!
 -   Test the apache server
 -   Modify the content of the configuration file to listen in port 82

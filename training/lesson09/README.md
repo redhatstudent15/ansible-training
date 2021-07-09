@@ -16,8 +16,8 @@ In order to assist this laboratory implementation, a set of resources have been 
 
 ## Steps 
 
--   Create an inventory file named "inventory" with a group named "myinstance" and your internal instance IP assigned included
--   Create a playbook named "tools-playbook.yml" using "myinstance" as a hosts parameter and ``<studentxx>`` as a user. The playbook should use tasks to ensure that the following conditions are met on the managed hosts:
+-   Create an inventory file named `inventory` with a group named "myinstance" and your internal instance IP assigned included (you can reuse the inventory file used in the previous lesson)
+-   Create a playbook named `tools-playbook.yml` using "myinstance" as a hosts parameter and ``<studentxx>`` as a user. The playbook should use tasks to ensure that the following conditions are met on the managed hosts:
     -   Define the following variables:
         -   User name variable named "mysql_user" with value "testuser01"
         -   User pass variable named "mysql_pass" with value "password01"
@@ -29,8 +29,8 @@ In order to assist this laboratory implementation, a set of resources have been 
     -   Restart mysqld service if installation packages has not changed
     -   Create two new mysql databases using "mysql_db" variable
     -   Create a new user using "mysql_name" and "mysql_pass" variables with read/write rights to "mysql_db" databases from host "mysql_client_ip"
-    -   Import "usertable.mysql" table file into both "mysql_db" databases delegating the operation to <mysql_client_ip> instance
--   Before running your playbook, run the ansible-playbook --syntax-check  command to verify that its syntax is correct
+    -   Import `usertable.mysql` table file into both "mysql_db" databases delegating the operation to <mysql_client_ip> instance
+-   Before running your playbook, run the `ansible-playbook --syntax-check` command to verify that its syntax is correct
 -   Run the playbook!
 -   Test the database
 

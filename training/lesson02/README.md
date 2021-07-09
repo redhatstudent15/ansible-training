@@ -6,14 +6,14 @@ In order to understand this lesson properly, a set of steps have been designed t
 
 **ENJOY !!!**
 
-## Steps 
+## Steps
 
 - Create an ansible configuration file in order to implement the following settings:
     * Get Current Ansible configuration
     * Enable auto-accept Hosts Keys
-    * Define an Ansible log file
-    * Change standard stdout callback
-    * Modify default inventory file
+    * Define an Ansible log file (ie. /var/log/ansible.log)
+    * Change standard stdout callback (ie. yaml)
+    * Modify default inventory file (ie. /etc/ansible/hosts)
 
 ## Useful Links
 
@@ -33,4 +33,4 @@ Author Information
  Asier Cidon - Cloud Consultant
 
  asier.cidon@redhat.com
- 
+
