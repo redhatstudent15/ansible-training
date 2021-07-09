@@ -21,32 +21,32 @@ In order to assist this laboratory implementation, a set of resources have been 
 
 ### lookup
 
--   Create an inventory file named "inventory" with a group named "myinstance" and your internal instance IP assigned included
--   Create a playbook named "lookup-playbook.yml" using "myinstance" as a hosts parameter and `<studentxx>` as a user. The playbook should use tasks to ensure that the following conditions are met on the managed hosts:
-    -   Create a variable named "test_dict" with dictionaryyyy.json file content (if file does not exist display a warning)
-    -   Create a variable named "dict_content" with dictionary.json file content and parse to an Ansible dictionary (if file does not exist display a warning)
+-   Create an inventory file named `inventory` with a group named "myinstance" and your internal instance IP assigned included (you can reuse the inventory file used in the previous lesson)
+-   Create a playbook named `lookup-playbook.yml` using "myinstance" as a hosts parameter and `<studentxx>` as a user. The playbook should use tasks to ensure that the following conditions are met on the managed hosts:
+    -   Create a variable named "test_dict" with `dictionaryyyy.json` file content (if file does not exist display a warning)
+    -   Create a variable named "dict_content" with `dictionary.json` file content and parse to an Ansible dictionary (if file does not exist display a warning)
     -   Display "test_dict" variable
     -   Display "dict_content" variable
--   Before running your playbook, run the ansible-playbook --syntax-check  command to verify that its syntax is correct
+-   Before running your playbook, run the `ansible-playbook --syntax-check` command to verify that its syntax is correct
 -   Run lookup-playbook.yml!
 
 ## tags
 
--   Create an inventory file named "inventory" with a group named "myinstance" and your internal instance IP assigned included
--   Copy playbook named "tags-playbook-template.yml" into "tags-playbook.yml" using "myinstance" as a hosts parameter and `<studentxx>` as a user. The playbook should use tags to ensure that the following conditions are met on the managed hosts:
+-   Create an inventory file named `inventory` with a group named "myinstance" and your internal instance IP assigned included (you can reuse the inventory file used in the previous lesson)
+-   Copy playbook named `tags-playbook-template.yml` into `tags-playbook.yml` using "myinstance" as a hosts parameter and `<studentxx>` as a user. The playbook should use tags to ensure that the following conditions are met on the managed hosts:
     -   Tag tasks 1 and 2 as "debug" 
     -   Tag task 3 as "user"
     -   Tag tasks 4 and 5 as "apache"
--   Before running your playbook, run the ansible-playbook --syntax-check  command to verify that its syntax is correct
+-   Before running your playbook, run the `ansible-playbook --syntax-check` command to verify that its syntax is correct
 -   Run tags-playbook.yml with tag debug
 -   Run tags-playbook.yml with tag user
 -   Run tags-playbook.yml with tag apache
 
-### callbacks
+## callbacks
 
--   Define "dense" callback in ansible.cfg
--   Run lookup-playbook.yml!
--   Run tags-playbook.yml!
+-   Define "dense" callback in `ansible.cfg`
+-   Run `lookup-playbook.yml`!
+-   Run `tags-playbook.yml!`
 
 ## Useful Links
 

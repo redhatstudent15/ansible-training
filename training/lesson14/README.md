@@ -17,10 +17,10 @@ In order to assist this laboratory implementation, a set of resources have been 
 
 ## Steps
 
--   Create an inventory file named "inventory" with a group named "myinstance" and your internal instance IP assigned included
--   Modify "ansible.cfg" configuration to be able to include the libraries included in ./library folder.
--   Copy "./library/my_first_module_template.py" into "./library/my_first_module.py" in order to implement a new module named "my_first_module.py"
--   Replace comments ´´<< XXXXXXXXX >>´´ in "my_first_module.py" in order to add the required content. The following list provides a summary about requisites:
+-   Create an inventory file named `inventory` with a group named "myinstance" and your internal instance IP assigned included (you can reuse the inventory file used in the previous lesson)
+-   Modify `ansible.cfg` configuration to be able to include the libraries included in ./library folder.
+-   Copy `./library/my_first_module_template.py` into `./library/my_first_module.py` in order to implement a new module named "my_first_module.py"
+-   Replace comments `<< XXXXXXXXX >>` in `my_first_module.py` in order to add the required content. The following list provides a summary about requisites:
     - Documentation section: 
         -   Define Module Name
         -   Introduce new option named "action"
@@ -30,7 +30,7 @@ In order to assist this laboratory implementation, a set of resources have been 
         -   Define result as "changed" when this module is executed
         -   Append name and action original parameter to ``result["original_message"]`` array
         -   Define the message *"``<user>`` would like to ``<action>``"* in ``result["message"]`` variable
--   Create a playbook named "modules-playbook.yml" using "myinstance" as a hosts parameter and `<studentxx>` as a user. The playbook should use tasks to ensure that the following conditions are met on the managed hosts:
+-   Create a playbook named `modules-playbook.yml` using "myinstance" as a hosts parameter and `<studentxx>` as a user. The playbook should use tasks to ensure that the following conditions are met on the managed hosts:
     -   Execute "my_first_module" module, and register output, with the following parameters:
         -   name: John
         -   action: Run
@@ -40,7 +40,7 @@ In order to assist this laboratory implementation, a set of resources have been 
     -   Display module execution output
     -   Execute "my_first_module" module, and register output, with the following parameters:
         -   name: Fail
--   Before running your playbook, run the ansible-playbook --syntax-check  command to verify that its syntax is correct
+-   Before running your playbook, run the `ansible-playbook --syntax-check` command to verify that its syntax is correct
 -   Run the playbook!
 
 ## Useful Links

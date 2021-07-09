@@ -5,7 +5,7 @@
 ---
 - hosts: myinstance
   become: true
-  user: student15
+  user: studentxx
   
   vars:
     - mysql_user: testuser01
@@ -48,7 +48,7 @@
         name: "{{ mysql_user }}"
         password: "{{ mysql_pass }}"
         append_privs: yes
-        priv: '{{ mysql_db }}.*:ALL,GRANT'
+        priv: '{{ item }}.*:ALL,GRANT'
         host: "{{ mysql_client_ip }}"
         state: present
       loop: "{{ mysql_db }}"

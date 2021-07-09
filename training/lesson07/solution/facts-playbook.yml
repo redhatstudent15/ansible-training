@@ -6,8 +6,6 @@
 - hosts: myinstance
   become: true
   user: studentxx
-  vars_files:
-    - vars/vars.yml
   tasks:
     - name: "Create custom fact directory"
       file:
