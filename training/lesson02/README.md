@@ -11,9 +11,9 @@ In order to understand this lesson properly, a set of steps have been designed t
 - Create an ansible configuration file in order to implement the following settings:
     * Get Current Ansible configuration
     * Enable auto-accept Hosts Keys
-    * Define an Ansible log file (ie. /var/log/ansible.log)
+    * Define an Ansible log file (ie. ./ansible.log)
     * Change standard stdout callback (ie. yaml)
-    * Modify default inventory file (ie. /etc/ansible/hosts)
+    * Modify default inventory file (ie. ./inventory)
 
 ## Useful Links
 
