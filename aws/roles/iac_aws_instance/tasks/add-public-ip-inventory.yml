@@ -1,7 +1,11 @@
 ---
 
+# - set_fact:
+#     aws_inventory: []
+#   when: aws_inventory is undefined
+
 - set_fact:
-    aws_inventory: []
+    aws_inventory: {}
   when: aws_inventory is undefined
 
 - ec2_instance_facts:
@@ -15,27 +19,47 @@
 
 - set_fact:
     bastion_ip: "{{ instance_facts.instances[0].network_interfaces[0].association.public_ip }}"
-  when: (instance_facts.instances[0] is defined) and (instance_facts.instances[0].network_interfaces[0])
+  when: (instance_facts.instances[0] is defined) and (instance_facts.instances[0].network_interfaces[0] is defined and instance_facts.instances[0].network_interfaces[0].association is defined)
 
 - set_fact:
     bastion_ip: "{{ instance_facts.instances[1].network_interfaces[0].association.public_ip }}"
-  when: (instance_facts.instances[1] is defined) and (instance_facts.instances[1].network_interfaces[0])
+  when: (instance_facts.instances[1] is defined) and (instance_facts.instances[1].network_interfaces[0] is defined and instance_facts.instances[1].network_interfaces[0].association is defined)
 
 - name: Add instance public IP to host group
   add_host:
     hostname: "{{ instance }}"
-    ansible_host: "{{ bastion_ip }}"
+    ansible_host: "{{ bastion_ip | default('') }}"
     ansible_ssh_private_key_file: "./files/id_rsa"
     groups:
       - ansiblenodes
-  
-- set_fact:
-    aws_inventory_item: 
-      - hostname: "{{ instance }}"
-      - public_dns_name: "{{ instance_facts.instances[0].public_dns_name }}"
-      - public_ip_address: "{{ instance_facts.instances[0].public_ip_address }}"
-      - private_dns_name: "{{ instance_facts.instances[0].private_dns_name }}"
-      - private_ip_address: "{{ instance_facts.instances[0].private_ip_address }}"
+
+#### - set_fact:
+####     aws_inventory_item:
+####       - hostname: "{{ instance }}"
+####       - public_dns_name: "{{ instance_facts.instances[0].public_dns_name }}"
+####       - public_ip_address: "{{ instance_facts.instances[0].public_ip_address | default('') }}"
+####       - private_dns_name: "{{ instance_facts.instances[0].private_dns_name }}"
+####       - private_ip_address: "{{ instance_facts.instances[0].private_ip_address }}"
 
 - set_fact:
-    aws_inventory: "{{ aws_inventory + [ aws_inventory_item ] }}"
+    aws_inventory_item:
+      hostname: "{{ instance }}"
+      public_dns_name: "{{ instance_facts.instances[0].public_dns_name }}"
+      public_ip_address: "{{ instance_facts.instances[0].public_ip_address | default('') }}"
+      private_dns_name: "{{ instance_facts.instances[0].private_dns_name }}"
+      private_ip_address: "{{ instance_facts.instances[0].private_ip_address }}"
+
+#### - debug:
+####     var: aws_inventory_item
+- debug:
+    var: aws_inventory_item
+
+#### - set_fact:
+####     aws_inventory: "{{ aws_inventory + [ aws_inventory_item ] }}"
+
+- set_fact:
+    aws_inventory: "{{ aws_inventory | combine({aws_inventory_item.hostname: aws_inventory_item}) }}"
+
+- debug:
+    var: aws_inventory
+...
