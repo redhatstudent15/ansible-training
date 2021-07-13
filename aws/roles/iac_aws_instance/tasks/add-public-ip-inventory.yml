@@ -1,9 +1,4 @@
 ---
-
-# - set_fact:
-#     aws_inventory: []
-#   when: aws_inventory is undefined
-
 - set_fact:
     aws_inventory: {}
   when: aws_inventory is undefined
@@ -33,15 +28,8 @@
     groups:
       - ansiblenodes
 
-#### - set_fact:
-####     aws_inventory_item:
-####       - hostname: "{{ instance }}"
-####       - public_dns_name: "{{ instance_facts.instances[0].public_dns_name }}"
-####       - public_ip_address: "{{ instance_facts.instances[0].public_ip_address | default('') }}"
-####       - private_dns_name: "{{ instance_facts.instances[0].private_dns_name }}"
-####       - private_ip_address: "{{ instance_facts.instances[0].private_ip_address }}"
-
-- set_fact:
+- name: Set the inventory information for the current item
+  set_fact:
     aws_inventory_item:
       hostname: "{{ instance }}"
       public_dns_name: "{{ instance_facts.instances[0].public_dns_name }}"
@@ -49,17 +37,11 @@
       private_dns_name: "{{ instance_facts.instances[0].private_dns_name }}"
       private_ip_address: "{{ instance_facts.instances[0].private_ip_address }}"
 
-#### - debug:
-####     var: aws_inventory_item
-- debug:
-    var: aws_inventory_item
-
-#### - set_fact:
-####     aws_inventory: "{{ aws_inventory + [ aws_inventory_item ] }}"
-
-- set_fact:
+- name: Add the inventory information to complete the list
+  set_fact:
     aws_inventory: "{{ aws_inventory | combine({aws_inventory_item.hostname: aws_inventory_item}) }}"
 
-- debug:
+- name: Show the inventory information
+  debug:
     var: aws_inventory
 ...
