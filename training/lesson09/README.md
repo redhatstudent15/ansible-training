@@ -23,7 +23,7 @@ In order to assist this laboratory implementation, a set of resources have been 
         -   User pass variable named "mysql_pass" with value "password01"
         -   List or array of database names variable named "mysql_db" with values "testdb01" and "testdb02"
         -   Client IP variable named "mysql_client_ip" with value <ip_classroom_instance>
-        -   List or Array of packages named "mysql_packages" with "mysql-server" and "python3-PyMySQL" included
+        -   List or Array of packages named "mysql_packages" with "mariadb-server" and "python3-PyMySQL" included
     -   Install the list of packages
     -   Start mysqld service if installation packages has changed 
     -   Restart mysqld service if installation packages has not changed
