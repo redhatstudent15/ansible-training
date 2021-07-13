@@ -48,4 +48,8 @@
         owner: root
         group: root
         mode: 0644
+
+    - name: Show the classroom01 URL (facts)
+      debug:
+        msg: "http://{{ hostvars.localhost.aws_inventory.classroom01.public_dns_name }}"
 ...
