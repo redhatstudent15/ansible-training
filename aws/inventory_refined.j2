@@ -1,8 +1,10 @@
-{% for entry in aws_inventory %}
-- hostname: {{ aws_inventory[entry].hostname }}
-    public_dns_name: {{ aws_inventory[entry].public_dns_name }}
-    public_ip_address: {{ aws_inventory[entry].public_ip_address }}
-    private_dns_name: {{ aws_inventory[entry].private_dns_name }}
-    private_ip_address: {{ aws_inventory[entry].private_ip_address }}
+{{ ansible_date_time.iso8601 }}
+===============================
+{% for entry in hostvars.localhost.aws_inventory %}
+- hostname: {{ hostvars.localhost.aws_inventory[entry].hostname }}
+    public_dns_name: {{ hostvars.localhost.aws_inventory[entry].public_dns_name }}
+    public_ip_address: {{ hostvars.localhost.aws_inventory[entry].public_ip_address }}
+    private_dns_name: {{ hostvars.localhost.aws_inventory[entry].private_dns_name }}
+    private_ip_address: {{ hostvars.localhost.aws_inventory[entry].private_ip_address }}
 
 {% endfor %}

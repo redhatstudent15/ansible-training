@@ -29,10 +29,10 @@
       debug:
         var: aws_inventory
 
-    - name: Write down the inventory file
-      template:
-        src: inventory_refined.j2
-        dest: /tmp/aws_inventory.json
+    # - name: Write down the inventory file
+    #   template:
+    #     src: inventory_refined.j2
+    #     dest: /tmp/aws_inventory.json
 
 - name: Place the inventory file at the classroom webserver
   hosts: classroom01
@@ -41,9 +41,17 @@
   vars:
     ansible_ssh_private_key_file: ../../ansiblepoc.pem
   tasks:
-    - name: Copy the inventory to the classroom
-      copy:
-        src: /tmp/aws_inventory.json
+    # - name: Copy the inventory to the classroom
+    #   copy:
+    #     src: /tmp/aws_inventory.json
+    #     dest: /var/www/html/files/inventario_refined
+    #     owner: root
+    #     group: root
+    #     mode: 0644
+
+    - name: Write down the inventory file
+      template:
+        src: inventory_refined.j2
         dest: /var/www/html/files/inventario_refined
         owner: root
         group: root
