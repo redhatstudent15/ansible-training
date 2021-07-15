@@ -29,35 +29,27 @@
       debug:
         var: aws_inventory
 
-    # - name: Write down the inventory file
-    #   template:
-    #     src: inventory_refined.j2
-    #     dest: /tmp/aws_inventory.json
-
 - name: Place the inventory file at the classroom webserver
   hosts: classroom01
   remote_user: ec2-user
   become: true
   vars:
     ansible_ssh_private_key_file: ../../ansiblepoc.pem
+    aws_inventory_file: inventory_refined
   tasks:
-    # - name: Copy the inventory to the classroom
-    #   copy:
-    #     src: /tmp/aws_inventory.json
-    #     dest: /var/www/html/files/inventario_refined
-    #     owner: root
-    #     group: root
-    #     mode: 0644
-
     - name: Write down the inventory file
       template:
         src: inventory_refined.j2
-        dest: /var/www/html/files/inventario_refined
+        dest: "/var/www/html/files/{{ aws_inventory_file }}"
         owner: root
         group: root
         mode: 0644
 
     - name: Show the classroom01 URL (facts)
       debug:
-        msg: "http://{{ hostvars.localhost.aws_inventory.classroom01.public_dns_name }}"
+        msg:
+          - "{{ base_url }}"
+          - "{{ base_url }}/{{ aws_inventory_file }}"
+      vars:
+        base_url: "http://{{ hostvars.localhost.aws_inventory.classroom01.public_dns_name }}/files"
 ...
