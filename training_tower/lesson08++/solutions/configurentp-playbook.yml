@@ -1,6 +1,6 @@
 - hosts: all
   become: true
-  gather_facts: false
+  gather_facts: yes
 
   vars:
     timesync_ntp_servers:
